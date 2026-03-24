@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio MediaQueries</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        /* Contenedor principal para las columnas */
+        .cv-container {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr;
+        }
+
+        h2 {
+            border-top: 2px solid #ccc;
+            padding-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        ul {
+            list-style: disc;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .textoAzul{
+            color: blue;
+        }
+
+        /* A partir de 600px y hasta 1200px: 2 columnas */
+        @media (min-width: 600px) and (max-width: 1199px) {
+            .cv-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        /* A partir de 1200px: 3 columnas */
+        @media (min-width: 1200px) {
+            .cv-container {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            h2 {
+                border-top: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Curriculum Vitae de Bruce Wayne</h1>
+
+    <div class="cv-container">
+        <section>
+            <h2>Datos personales</h2>
+            <ul>
+                <li>Nombre completo: <strong>Bruce Wayne</strong></li>
+                <li>Fecha de nacimiento: <strong>1/5/1939</strong></li>
+                <li>Lugar de nacimiento: <strong>Gotham City</strong></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Formación académica</h2>
+            <ul>
+                <li> <span class="textoAzul">1956-1961: </span> <strong>Universidad del Espantapájaros</strong></li>
+                <li> <span class="textoAzul">1952-1956:</span> <strong>Instituto de Dos Caras</strong></li>
+                <li> <span class="textoAzul">1944-1952:</span> <strong>Escuela Primaria del Joker</strong></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Experiencia laboral</h2>
+            <ul>
+                <li> <span class="textoAzul">1975-1985:</span> <strong>En el paro</strong></li>
+                <li> <span class="textoAzul">1965-1975:</span> <strong>Cazavillanos y demás chusma</strong></li>
+                <li> <span class="textoAzul">1962-1965:</span> <strong>Aprendiz de superhéroe</strong></li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+</html>

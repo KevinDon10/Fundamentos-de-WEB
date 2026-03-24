@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .textoRojo {
+            color: red;
+            font-size: 45px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="elemento" style="color: red;">Hola mundo</h1>
+    <h1 class="texto">Hola mundo</h1>
+    <h1 class="texto">Hola mundo</h1>
+    <h1 class="texto">Hola mundo</h1>
+    <h2 class="texto">Hola mundo</h2>
+
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, beatae autem. Laudantium numquam
+            reprehenderit earum ut doloribus dolorum quas voluptatibus iusto! Consequuntur deleniti ratione temporibus,
+            corrupti dolorum doloremque laudantium facilis.
+        </p>
+    </div>
+
+    <a href="#">Ir a google</a>
+    <img src="" alt="Imagen">
+
+    <script>
+        const h1 = document.querySelector("h1");
+        const h2 = document.querySelector("h2");
+        const elements = document.querySelectorAll("h1");
+        const id = document.getElementById("elemento");
+        const textos = document.getElementsByClassName("texto");
+
+        const a = document.querySelector("a");
+        const img = document.querySelector("img");
+
+        h1.textContent = "Hola a Todos"
+        h1.classList.toggle("textoRojo");
+
+        a.textContent = "https://www.google.com";
+        img.src = "https://picsum.photos/200/300";
+
+        const div = document.querySelector("div");
+
+        function createElement() {
+            const p = document.createElement("p");
+            p.textContent = "Elemento creado desde JS";
+
+            div.append(p);
+        }
+
+        function removeElement(){
+            const p = document.querySelector("p");
+            div.removeChild(p);
+
+        }
+
+        console.log(h1);
+    </script>
+</body>
+
+</html>

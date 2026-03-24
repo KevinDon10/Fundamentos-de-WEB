@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+
+<body onload="cargar()">
+
+    <!-- <button onclick="incrementar()">+1</button>
+    <p>0</p> -->
+
+
+    <script>
+
+        async function cargar(){
+            const result = await fetch("https://rickandmortyapi.com/api/character").then(response => response.json());
+
+            console.log(result.results);
+
+            const personajes = result.results;
+            for(let i = 0; i < personajes.length; i++){
+                console.log(personajes[i]);
+            }
+        }
+
+        // let contador = localStorage.getItem("contador");
+        // const p = document.querySelector("p");
+
+        // function cargar() {
+        //     if (contador === null) {
+        //         contador = 0;
+        //     }
+
+        //     p.textContent = contador;
+
+        //     localStorage.setItem("nombre", "Juan");
+        // }
+
+        // function incrementar() {
+        //     contador++;
+        //     localStorage.setItem("contador", contador);
+        //     p.textContent = contador;
+        // }
+
+        // const objeto = {
+        //     nombre: "Juan",
+        //     apellido: "Perez",
+        //     edad: 22,
+        //     direccion:{
+        //         calle: "Privada libertad",
+        //         numero: 215,
+        //     },
+        //     materias: [
+        //         "Español",
+        //         "Computación",
+        //         "Matemáticas"
+        //     ],
+        // }
+
+        // console.log(objeto.direccion.calle);
+
+    </script>
+</body>
+
+</html>

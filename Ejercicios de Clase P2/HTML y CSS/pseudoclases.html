@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases</title>
+
+    <style>
+        div {
+            width: 250px;
+            height: 250px;
+            background-color: blue;
+            /* transition-property: background-color width;
+            transition-duration: 3s;
+            transition-delay: 2s;
+            transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045); */
+            transition: width 3s 0s linear;
+        }
+
+        div:hover {
+            background-color: red;
+            width: 1500px;
+            height: 500px;
+        }
+
+        p{
+            color: green;
+            font-size: medium;
+        }
+
+        p:active{
+            color: blue;
+            font-size: large;
+        }
+
+        input:focus{
+            font-size: larger;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quod ratione facere at maiores saepe eligendi
+        consequuntur temporibus fuga modi voluptas, voluptatibus amet mollitia nihil doloremque labore est, praesentium
+        consequatur.
+    </p>
+
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <button>Click</button>
+</body>
+
+</html>

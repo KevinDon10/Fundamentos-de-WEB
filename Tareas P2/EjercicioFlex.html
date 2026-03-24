@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Flex</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .encabezado {
+            background-color: #c48000;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            line-height: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .container>section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .lados {
+            flex: 1;
+            background-color: #4d4d50;
+            color: white;
+        }
+
+        .centro {
+            flex: 2;
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <h1>Titulo de la página</h1>
+    </header>
+
+    <main class="container">
+        <section class="lados">Lateral izquierdo</section>
+        <section class="centro">Zona central</section>
+        <section class="lados">Lateral derecho</section>
+    </main>
+
+</body>
+
+</html>
