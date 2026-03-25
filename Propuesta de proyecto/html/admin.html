@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Kev's | Panel Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="pagina-panel">
+    <div class="diseno-panel">
+        <aside class="barra-panel">
+            <a href="index.html" class="marca marca-panel">
+                <span class="marca-icono">&#9986;</span>
+                <span>Barber Kev's</span>
+            </a>
+            <nav class="navegacion-panel">
+                <a href="#" class="activo"><i class="bi bi-speedometer2"></i>Resumen</a>
+                <a href="#"><i class="bi bi-calendar-check"></i>Gestión de Citas</a>
+                <a href="#"><i class="bi bi-scissors"></i>Servicios</a>
+                <a href="#"><i class="bi bi-clock-history"></i>Horarios</a>
+                <a href="#"><i class="bi bi-people"></i>Clientes</a>
+            </nav>
+            <a href="login.html" class="enlace-cerrar-panel">Cerrar Sesión</a>
+        </aside>
+
+        <main class="contenido-panel">
+            <section class="cabecera-panel">
+                <div>
+                    <span class="texto-destacado">Administrador</span>
+                    <h1>Panel de Control</h1>
+                    <p>Consulta el estado de las citas, servicios destacados y disponibilidad del día.</p>
+                </div>
+            </section>
+
+            <section class="estadisticas-panel">
+                <article class="tarjeta-metrica">
+                    <span>Citas Hoy</span>
+                    <strong>12</strong>
+                    <small>3 pendientes de confirmar</small>
+                </article>
+                <article class="tarjeta-metrica">
+                    <span>Servicios Activos</span>
+                    <strong>6</strong>
+                    <small>2 promociones vigentes</small>
+                </article>
+                <article class="tarjeta-metrica">
+                    <span>Ingresos Estimados</span>
+                    <strong>$4,280</strong>
+                    <small>Proyección del día</small>
+                </article>
+            </section>
+
+            <section class="rejilla-panel">
+                <section class="panel">
+                    <div class="encabezado-panel">
+                        <h2>Citas del Día</h2>
+                        <p>Seguimiento rápido del flujo operativo.</p>
+                    </div>
+                    <div class="contenedor-tabla">
+                        <table class="tabla-datos">
+                            <thead>
+                                <tr>
+                                    <th>Cliente</th>
+                                    <th>Servicio</th>
+                                    <th>Hora</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ana Torres</td>
+                                    <td>Corte Clásico</td>
+                                    <td>10:00 AM</td>
+                                    <td><span class="estado pendiente">Pendiente</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Luis Gómez</td>
+                                    <td>Paquete Completo</td>
+                                    <td>12:30 PM</td>
+                                    <td><span class="estado completada">Completada</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Marco Pérez</td>
+                                    <td>Barba y Bigote</td>
+                                    <td>03:00 PM</td>
+                                    <td><span class="estado proceso">En proceso</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Raúl Díaz</td>
+                                    <td>Spa Capilar</td>
+                                    <td>05:30 PM</td>
+                                    <td><span class="estado pendiente">Pendiente</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="panel columna-panel">
+                    <div class="encabezado-panel">
+                        <h2>Disponibilidad</h2>
+                        <p>Bloques recomendados para nuevas reservas.</p>
+                    </div>
+                    <div class="lista-horarios">
+                        <div class="item-horario"><strong>11:30 AM</strong><span>Disponible para Corte Clásico</span></div>
+                        <div class="item-horario"><strong>02:00 PM</strong><span>Disponible para Barba y Bigote</span></div>
+                        <div class="item-horario"><strong>06:15 PM</strong><span>Disponible para Paquete Completo</span></div>
+                    </div>
+                    <div class="encabezado-panel encabezado-secundario">
+                        <h2>Servicios Más Solicitados</h2>
+                    </div>
+                    <div class="servicios-destacados">
+                        <div><span>Corte Clásico</span><strong>42%</strong></div>
+                        <div><span>Paquete Completo</span><strong>31%</strong></div>
+                        <div><span>Barba y Bigote</span><strong>18%</strong></div>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

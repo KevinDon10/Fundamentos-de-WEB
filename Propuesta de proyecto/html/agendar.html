@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Kev's | Agendar Cita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/agendar.css">
+</head>
+<body class="pagina-interna">
+    <header class="encabezado-sitio">
+        <div class="marca">
+            <span class="marca-icono">&#9986;</span>
+            <span>Barber Kev's</span>
+        </div>
+        <nav class="navegacion-principal">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#servicios">Servicios</a>
+            <a href="agendar.html" class="activo">Agendar Cita</a>
+            <a href="login.html">Mi Cuenta</a>
+        </nav>
+        <div class="acciones-encabezado">
+            <a href="login.html" class="enlace-login">Iniciar Sesión</a>
+            <a href="registro.html" class="boton boton-dorado">Registrarse</a>
+        </div>
+    </header>
+
+    <main class="contenedor-pagina">
+        <section class="cabecera-interna">
+            <div>
+                <span class="texto-destacado">Reserva</span>
+                <h1>Agenda tu cita en pocos pasos</h1>
+                <p>Selecciona el servicio ideal, define fecha y horario, y confirma tu visita sin complicaciones.</p>
+            </div>
+        </section>
+
+        <section class="diseno-agenda">
+            <form class="panel formulario-agenda" action="index.html">
+                <div class="encabezado-panel">
+                    <h2>Detalles de la Cita</h2>
+                    <p>Completa la información para reservar tu servicio.</p>
+                </div>
+                <label for="servicio">Servicio</label>
+                <select id="servicio">
+                    <option>Corte Clásico - $320 MXN</option>
+                    <option>Barba y Bigote - $190 MXN</option>
+                    <option>Paquete Completo - $400 MXN</option>
+                    <option>Spa Capilar - $280 MXN</option>
+                </select>
+                <div class="rejilla-formulario">
+                    <div>
+                        <label for="fecha">Fecha</label>
+                        <input id="fecha" type="date">
+                    </div>
+                    <div>
+                        <label for="hora">Hora</label>
+                        <input id="hora" type="time">
+                    </div>
+                </div>
+                <div class="rejilla-formulario">
+                    <div>
+                        <label for="barbero">Barbero</label>
+                        <select id="barbero">
+                            <option>Kev</option>
+                            <option>Alex</option>
+                            <option>Staff disponible</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="sucursal">Sucursal</label>
+                        <select id="sucursal">
+                            <option>Matriz Centro</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="notas">Notas adicionales</label>
+                <textarea id="notas" rows="5" placeholder="Preferencias de estilo, observaciones o detalles de tu cita"></textarea>
+                <button type="submit" class="boton boton-dorado ancho-completo">Confirmar Cita</button>
+            </form>
+
+            <aside class="columna-agenda">
+                <section class="panel resumen-agenda">
+                    <div class="encabezado-panel">
+                        <h2>Resumen</h2>
+                        <p>Información estimada de tu reserva.</p>
+                    </div>
+                    <div class="lista-resumen">
+                        <div><span>Servicio</span><strong>Paquete Completo</strong></div>
+                        <div><span>Duración</span><strong>60 min</strong></div>
+                        <div><span>Costo</span><strong>$400 MXN</strong></div>
+                        <div><span>Disponibilidad</span><strong>Hoy 5:30 PM</strong></div>
+                    </div>
+                </section>
+
+                <section class="panel servicios-mini">
+                    <div class="encabezado-panel">
+                        <h2>Servicios Populares</h2>
+                    </div>
+                    <article class="servicio-mini">
+                        <img src="../img/servicio-corte.png" alt="Corte clásico">
+                        <div>
+                            <h3>Corte Clásico</h3>
+                            <p>Elegancia y definición.</p>
+                        </div>
+                    </article>
+                    <article class="servicio-mini">
+                        <img src="../img/servicio-barba.png" alt="Barba y bigote">
+                        <div>
+                            <h3>Barba y Bigote</h3>
+                            <p>Perfilado profesional.</p>
+                        </div>
+                    </article>
+                    <article class="servicio-mini">
+                        <img src="../img/servici-spa.png" alt="Spa capilar">
+                        <div>
+                            <h3>Spa Capilar</h3>
+                            <p>Relajación y cuidado.</p>
+                        </div>
+                    </article>
+                </section>
+            </aside>
+        </section>
+    </main>
+</body>
+</html>

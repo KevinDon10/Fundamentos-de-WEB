@@ -1,0 +1,156 @@
+.pagina-acceso {
+    min-height: 100vh;
+    background: #181818;
+}
+
+.contenedor-acceso {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 12px;
+}
+
+.tarjeta-acceso {
+    width: min(100%, 680px);
+    padding: 16px 14px;
+}
+
+.tarjeta-acceso-ancha {
+    width: min(100%, 700px);
+}
+
+.marca-acceso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    color: var(--accent-gold);
+    font-family: serif;
+    font-size: clamp(1.4rem, 5vw, 1.9rem);
+    font-weight: 700;
+}
+
+.icono-marca-acceso {
+    font-size: 0.9em;
+}
+
+.encabezado-acceso {
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.encabezado-acceso h1 {
+    margin: 0 0 8px;
+    font-family: serif;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.encabezado-acceso p,
+.texto-registro,
+.enlace-volver {
+    color: var(--text-dim);
+}
+
+.rejilla-acceso {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.formulario-acceso {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formulario-acceso label {
+    margin-top: 4px;
+    font-weight: 600;
+    font-size: 0.92rem;
+}
+
+.campo-icono {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--bg-input);
+}
+
+
+.campo-icono input {
+    margin: 0;
+    padding: 10px 0;
+    border: 0;
+    background: transparent;
+}
+
+.icono-campo,
+.boton-ver-clave {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(247, 242, 232, 0.58);
+    flex: 0 0 auto;
+}
+
+.icono-campo i,
+.boton-ver-clave i {
+    font-size: 0.9rem;
+}
+
+.boton-ver-clave {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.meta-acceso {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2px;
+}
+
+.enlace-dorado {
+    color: var(--accent-gold);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.boton-acceso {
+    margin-top: 6px;
+    min-height: 38px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--accent-gold);
+    color: #111111;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.texto-registro,
+.enlace-volver {
+    text-align: center;
+}
+
+.texto-registro {
+    margin: 12px 0 8px;
+    font-size: 0.92rem;
+}
+
+@media (max-width: 920px) {
+    .rejilla-acceso {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .tarjeta-acceso {
+        padding: 34px 20px 28px;
+    }
+}

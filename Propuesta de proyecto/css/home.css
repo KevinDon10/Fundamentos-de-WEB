@@ -1,0 +1,242 @@
+.portada {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 90px 16px 24px;
+    background-image:
+        url("../img/main.png");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.capa-portada {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.28);
+}
+
+.contenido-portada {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 500px);
+    margin-left: 0;
+}
+
+.insignia-portada {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: #1e1e1e;
+    color: var(--accent-gold);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+
+.portada h1 {
+    margin: 0;
+    font-family: serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    line-height: 1.1;
+}
+
+.portada h1 span {
+    display: block;
+    color: var(--accent-gold);
+}
+
+.portada p,
+.encabezado-seccion p,
+.texto-vitrina p,
+.panel-llamada p {
+    color: var(--text-dim);
+    line-height: 1.45;
+}
+
+.portada p {
+    max-width: 500px;
+    margin: 12px 0 16px;
+    font-size: 0.9rem;
+}
+
+.acciones-portada {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.franja-intro {
+    margin-top: 0;
+}
+
+.encabezado-seccion {
+    max-width: 620px;
+    margin-bottom: 14px;
+}
+
+.encabezado-compacto {
+    margin-bottom: 24px;
+}
+
+.encabezado-seccion h2,
+.texto-vitrina h2,
+.panel-llamada h2 {
+    margin: 8px 0 0;
+    font-family: serif;
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    line-height: 1.15;
+}
+
+.rejilla-estadisticas,
+.rejilla-servicios {
+    display: grid;
+    gap: 12px;
+}
+
+.rejilla-estadisticas {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.tarjeta-estadistica {
+    padding: 12px;
+}
+
+.tarjeta-estadistica strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+}
+
+.tarjeta-estadistica span {
+    color: rgba(247, 242, 232, 0.72);
+}
+
+.rejilla-servicios {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tarjeta-servicio {
+    overflow: hidden;
+}
+
+.tarjeta-servicio img {
+    aspect-ratio: 16 / 10;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cuerpo-servicio {
+    padding: 10px;
+}
+
+.cuerpo-servicio h3 {
+    margin: 0 0 6px;
+    font-size: 0.95rem;
+}
+
+.cuerpo-servicio p {
+    margin: 0 0 10px;
+    color: var(--text-dim);
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+
+.etiqueta-precio {
+    display: inline-flex;
+    padding: 3px 6px;
+    border-radius: 4px;
+    background: #252525;
+    border: 1px solid var(--border-color);
+    color: var(--accent-gold);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.seccion-dividida {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    align-items: center;
+    gap: 14px;
+}
+
+.lista-beneficios {
+    padding: 0;
+    margin: 16px 0 0;
+    list-style: none;
+    display: grid;
+    gap: 8px;
+}
+
+.lista-beneficios li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-light);
+    font-size: 0.92rem;
+}
+
+.lista-beneficios i {
+    color: var(--accent-gold);
+}
+
+.rejilla-galeria {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.rejilla-galeria img {
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.panel-llamada {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+@media (max-width: 1100px) {
+    .rejilla-servicios,
+    .seccion-dividida {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 920px) {
+    .portada {
+        padding: 100px 16px 40px;
+        background-position: 62% center;
+    }
+
+    .rejilla-estadisticas {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .portada h1 {
+        font-size: clamp(3.1rem, 16vw, 4.6rem);
+    }
+
+    .acciones-portada,
+    .panel-llamada {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .rejilla-galeria img {
+        height: 180px;
+    }
+}

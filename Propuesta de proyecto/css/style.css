@@ -1,0 +1,245 @@
+:root {
+    --bg-dark: #1a1a1a;
+    --bg-panel: #222222;
+    --bg-input: #2a2a2a;
+    --accent-gold: #c79b2a;
+    --accent-gold-soft: rgba(199, 155, 42, 0.05);
+    --text-light: #eeeeee;
+    --text-muted: #c0c0c0;
+    --text-dim: #9c9c9c;
+    --border-color: rgba(255, 255, 255, 0.14);
+    --shadow-lg: none;
+    --radius-lg: 4px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    font-family: sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.encabezado-sitio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 18px;
+    background: #1d1d1d;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.marca {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent-gold);
+    font-family: serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.marca-icono {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.navegacion-principal {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.9rem;
+}
+
+.navegacion-principal a,
+.enlace-login,
+.navegacion-panel a,
+.enlace-cerrar-panel {
+    transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.navegacion-principal a:hover,
+.navegacion-principal a.activo,
+.enlace-login:hover {
+    color: #ffffff;
+}
+
+.acciones-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.enlace-login {
+    font-weight: 700;
+}
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 38px;
+    padding: 0 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-weight: 500;
+    transition: none;
+}
+
+.boton:hover {
+    transform: none;
+}
+
+.boton-dorado {
+    background: var(--accent-gold);
+    color: #111111;
+}
+
+.boton-contorno {
+    background: #222222;
+    border-color: var(--border-color);
+    color: var(--text-light);
+}
+
+.ancho-completo {
+    width: 100%;
+}
+
+.seccion,
+.contenedor-pagina {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.seccion {
+    padding: 28px 0;
+}
+
+.texto-destacado {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent-gold);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.panel,
+.tarjeta-acceso,
+.panel-llamada,
+.tarjeta-metrica,
+.tarjeta-estadistica,
+.tarjeta-servicio {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    background: var(--bg-panel);
+    box-shadow: var(--shadow-lg);
+}
+
+.panel {
+    padding: 14px;
+}
+
+.encabezado-panel {
+    margin-bottom: 12px;
+}
+
+.encabezado-panel h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-family: serif;
+    font-size: clamp(1.3rem, 4vw, 1.7rem);
+    line-height: 1.15;
+}
+
+.encabezado-panel p {
+    color: var(--text-dim);
+    line-height: 1.45;
+    margin: 0;
+    font-size: 0.92rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--bg-input);
+    color: var(--text-light);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+@media (max-width: 920px) {
+    .encabezado-sitio {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 16px 20px;
+    }
+
+    .navegacion-principal {
+        order: 3;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .seccion,
+    .contenedor-pagina {
+        width: min(100%, calc(100% - 28px));
+    }
+}
+
+@media (max-width: 640px) {
+    .marca {
+        font-size: 1.65rem;
+    }
+
+    .acciones-encabezado {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .boton {
+        width: 100%;
+    }
+}
